@@ -9,4 +9,8 @@ public class SendEmailOnOrderPlacedEvent implements OnOrderPlacedEventHandler{
     public void update() {
         System.out.println("Sending email to customer");
     }
+
+    public void unregister(){
+        Amazon.getInstance().unregister(this);
+    }
 }

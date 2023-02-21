@@ -9,5 +9,9 @@ public class Client {
         InventoryUpdateOnOrderPlacedEvent inventoryUpdateOnOrderPlacedEvent = new InventoryUpdateOnOrderPlacedEvent();
 
         amazon.placeOrder();
+
+        sendEmailOnOrderPlacedEvent.unregister();
+        System.out.println("------------------------");
+        amazon.placeOrder();
     }
 }
